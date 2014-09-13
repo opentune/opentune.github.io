@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>OpenTune | Music for Everyone.</title>
+		<title>OpenTune | The Easiest Way to Download Music.</title>
 		<link rel="icon" type="image/png" href="images/favicon.png">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css' />
 		<link type="text/css" href="main.css" rel="stylesheet">
@@ -87,11 +87,6 @@
 	  	<script>
   		$(document).ready(function() {
 
-  			//initial animation
-  			$('#wrapper').fadeTo(1000, 1);
-  			$('#section0').animate({left: "0px"}, 700);
-  			$('.screenshot').animate({left: "0px"}, 700);
-
 			var controller = $.superscrollorama();
 
 			controller.addTween('#section1', TweenMax.from( $('#screenshot1'), .5, {css:{opacity: 0}}));
@@ -100,9 +95,14 @@
 			controller.addTween('#section4', TweenMax.from( $('#screenshot4'), .5, {css:{opacity: 0}}));
 			
 		});
+		$('#screenshot0').load(function() {
+			//initial animation
+  			$('#wrapper').fadeTo(1000, 1);
+  			$('#section0').animate({left: "0px"}, 700);
+  			$('.screenshot').animate({left: "0px"}, 700);
+		});
 		</script>
 
 		<!--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5413dd76319fb99a"></script>-->
-		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 	</body>
 </html>

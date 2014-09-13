@@ -59,12 +59,6 @@ body * {
 		.clickable:hover {
 			opacity: 0.8;
 		}
-/*#screenshot {
-	position: fixed;
-	right: -100px;
-	bottom: -100px;
-	z-index: 99;
-}*/
 
 #wrapper {
 	width: 100%; height: 100%;
@@ -73,14 +67,12 @@ body * {
 }
 	#text-div {
 		width: 40%; height: 100%;
-		fbackground-color: red;
 		display: inline-block;
 		float: left;
 		color: white;
 		text-align: center;
 	}
 		#text-div .section {
-			fbackground-color: purple;
 			max-width: 430px;
 			margin-left: auto;
 			margin-right: auto;
@@ -128,7 +120,6 @@ body * {
 			}
 	#screenshot-div {
 		width: 60%; height: 100%;
-		fbackground-color: blue;
 		position: fixed;
 		display: inline-block;
 		float: left;
@@ -157,7 +148,6 @@ body * {
 		font-size: 20px;
 		font-weight: 300;
 		opacity: 0.8;
-		fheight: 300px;
 		height: 40px;
 	}
 		#footer a {
