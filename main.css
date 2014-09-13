@@ -1,0 +1,169 @@
+body {
+	box-sizing: border-box;
+	width: 100%; height: 100%;
+	margin: 0px; padding: 0px;
+	background-color: black;
+	font-family: 'Open Sans', sans-serif;
+}
+body * {
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+}
+#navbar {
+	height: 65px;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	left: 0px; top: 0px;
+	border-bottom: 1px solid #1a1a1a;
+	z-index: 99;
+	padding: 0px 25px;
+}
+	.inner-container {
+		width: 1200px;
+		margin: 0px auto;
+	}
+	#logo {
+		margin-top: 12px;
+		float: left;
+	}
+	.icons {
+		float: right;
+		margin-top: 18px;
+		margin-right: 11px;
+	}
+	#navbar .btn {
+		margin-top: 12px;
+		margin-right: 55px;
+		float: right;
+	}
+	.btn {
+	    color: white;
+	    background-color: #ff2929;
+	    padding: 6px 17px;
+	    border-radius: 2px;
+	    display: inline-block;
+	    font-weight: 300;
+	    font-size: 20px;
+	}
+	.big-btn {
+		font-size: 22px;
+		padding: 8px 24px 10px 24px;
+		margin-top: 35px;
+		border-radius: 4px;
+	}
+	.clickable {
+ 		cursor: pointer;
+	}
+		.clickable:hover {
+			opacity: 0.8;
+		}
+/*#screenshot {
+	position: fixed;
+	right: -100px;
+	bottom: -100px;
+	z-index: 99;
+}*/
+
+#wrapper {
+	width: 100%; height: 100%;
+	position: relative;
+	opacity: 0;
+}
+	#text-div {
+		width: 40%; height: 100%;
+		fbackground-color: red;
+		display: inline-block;
+		float: left;
+		color: white;
+		text-align: center;
+	}
+		#text-div .section {
+			fbackground-color: purple;
+			max-width: 430px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 300px;
+		}
+		@media screen and (min-width: 1700px){
+			.section {
+				zoom: 115%;
+			}
+		}
+			#section0 {
+				margin-top: 30%;
+				position: relative;
+				left: -50px;
+			}
+			.section h2 {
+				font-size: 39px;
+				font-weight: 400;
+			}
+			.textarea {
+				font-size: 23px;
+				font-weight: 300;
+				opacity: 0.7;
+				margin: 0px;
+				text-align: left;
+				padding-left: 30px;
+			}
+				.section .dot {
+					margin-right: 10px;
+					margin-bottom: 2px;
+				}
+			.section .badge {
+				margin-bottom: 25px;
+			}
+			.section #badges {
+				margin-top: 35px;
+			}
+
+			.under-btn {
+				font-size: 15px;
+				font-weight: 300;
+				opacity: 0.7;
+				margin-top: 5px;
+				text-align: center;
+			}
+	#screenshot-div {
+		width: 60%; height: 100%;
+		fbackground-color: blue;
+		position: fixed;
+		display: inline-block;
+		float: left;
+		overflow: hidden;
+	}
+		#screenshot-div .screenshot {
+			position: absolute;
+			left: 50px;
+			top: 21%;
+			z-index: 99;
+		}
+		#screenshot1 {
+			z-index: 110;
+		}
+		#screenshot2 {
+			z-index: 120;
+		}
+		#screenshot3 {
+			z-index: 130;
+		}
+		#screenshot4 {
+			z-index: 140;
+		}
+
+	#footer {
+		font-size: 20px;
+		font-weight: 300;
+		opacity: 0.8;
+		fheight: 300px;
+		height: 40px;
+	}
+		#footer a {
+			text-decoration: none;
+			color: white;
+		}
+		#footer a:hover {
+			text-decoration: underline;
+		}
