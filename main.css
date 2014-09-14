@@ -20,10 +20,6 @@ body * {
 	z-index: 99;
 	padding: 0px 25px;
 }
-	.inner-container {
-		width: 1200px;
-		margin: 0px auto;
-	}
 	#logo {
 		margin-top: 12px;
 		float: left;
@@ -160,23 +156,28 @@ body * {
 
 /* mobile exceptions */
 @media screen and (max-device-width: 600px){
+	html {
+		width: 600px;
+	}
 	body {
 		width: 600px;
-		overflow-x: hidden;
 	}
 	#navbar .btn {
 		display: none;
 	}
 	#wrapper {
-		width: auto;
-		position: absolute;
+		width: 600px; height: 100%;
+		position: fixed;
 		left: 0px; top: 0px;
-		background-color: blue;
+		overflow-y: scroll;
 	}
 	#text-div {
 		width: 100%;
-		background-color: red;
 	}
+		#text-div .section {
+			margin-left: 0px;
+			margin-right: 0px;
+		}
 	#screenshot-div {
 		display: none;
 	}
