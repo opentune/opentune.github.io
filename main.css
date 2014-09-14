@@ -79,6 +79,12 @@ body * {
 				zoom: 115%;
 			}
 		}
+		@media screen and (max-width: 1300px){
+			.section {
+				zoom: 90%;
+				padding-top: 20px;
+			}
+		}
 			#section0 {
 				margin-top: 30%;
 				position: relative;
@@ -166,17 +172,14 @@ body * {
 		display: none;
 	}
 	#wrapper {
-		width: 600px; height: 100%;
-		position: fixed;
+		position: absolute;
 		left: 0px; top: 0px;
-		overflow-y: scroll;
 	}
 	#text-div {
 		width: 100%;
 	}
-		#text-div .section {
-			margin-left: 0px;
-			margin-right: 0px;
+		#section0 {
+			margin-top: 100px;
 		}
 	#screenshot-div {
 		display: none;
