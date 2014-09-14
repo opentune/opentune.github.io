@@ -10,7 +10,7 @@
 			<!--<div class="inner-container">-->
 				<img src="images/logo.png" id="logo" />
 				
-				<span class="btn clickable">download</span>
+				<a href="opentune-setup.exe"><span class="btn clickable">download</span></a>
 				<a href="https://github.com/opentune/opentune" target="_blank"><img src="images/github-icon.png" class="icons clickable" /></a>
 				<a href="" target="_blank"><img src="images/facebook-icon.png" class="icons clickable" /></a>
 			<!--</div>-->
@@ -24,7 +24,7 @@
 					<p class="textarea" style="text-align:center;padding:0px">
 						The easiest way to browse, search, and download music straight from your desktop - for free.
 					</p>
-					<span class="btn big-btn clickable">download for windows</span>
+					<a href="opentune-setup.exe"><span class="btn big-btn clickable">download for windows</span></a>
 					<br>
 					<img src="images/icons.png" id="badges" />
 				</div>
@@ -63,14 +63,14 @@
 				</div>
 				<div class="section"  id="section5" style="margin-bottom: 250px">
 					<h2 class="header2">The easiest way<br>to keep music.</h2>
-					<span class="btn big-btn clickable">download for windows</span><br>
+					<a href="opentune-setup.exe"><span class="btn big-btn clickable">download for windows</span><br></a>
 					<p class="under-btn">
 						Coming soon to Mac, Linux, &amp; Android.
 					</p>
 				</div>
 
 				
-				<p id="footer"><a href="mailto:hello@opentune.tk" target="_top">Email us</a> | <a href="" target="_blank">Read our blog</a> | <a href="https://github.com/opentune/opentune" target="_blank">View source</a></p>
+				<p id="footer"><a href="mailto:hello@opentune.tk" target="_top">Email us</a> | <a href="http://opentuneblog.tumblr.com/" target="_blank">Read our blog</a> | <a href="https://github.com/opentune/opentune" target="_blank">View source</a></p>
 			</div>
 			<div id="screenshot-div">
 				<img src="images/screenshot0.jpg" class="screenshot" id="screenshot0" />
@@ -93,6 +93,11 @@
 			controller.addTween('#section2', TweenMax.from( $('#screenshot2'), .5, {css:{opacity: 0}}));
 			controller.addTween('#section3', TweenMax.from( $('#screenshot3'), .5, {css:{opacity: 0}}));
 			controller.addTween('#section4', TweenMax.from( $('#screenshot4'), .5, {css:{opacity: 0}}));
+
+			//in case user refreshes page and image is cached
+			$('#wrapper').fadeTo(1000, 1);
+  			$('#section0').animate({left: "0px"}, 700);
+  			$('.screenshot').animate({left: "0px"}, 700);
 			
 		});
 		$('#screenshot0').load(function() {
