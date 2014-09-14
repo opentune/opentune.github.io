@@ -160,14 +160,22 @@ body * {
 
 /* mobile exceptions */
 @media screen and (max-device-width: 600px){
+	body {
+		width: 600px;
+		overflow-x: hidden;
+	}
 	#navbar .btn {
 		display: none;
 	}
 	#wrapper {
 		width: auto;
+		position: absolute;
+		left: 0px; top: 0px;
+		background-color: blue;
 	}
 	#text-div {
-		width: auto;
+		width: 100%;
+		background-color: red;
 	}
 	#screenshot-div {
 		display: none;
