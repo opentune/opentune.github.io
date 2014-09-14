@@ -157,3 +157,20 @@ body * {
 		#footer a:hover {
 			text-decoration: underline;
 		}
+
+/* mobile exceptions */
+@media screen and (max-width: 600px){
+	#navbar .btn {
+		display: none;
+	}
+	#wrapper {
+		width: 100%;
+	}
+	#text-div {
+		width: 100%;
+	}
+	#screenshot-div {
+		display: none;
+	}
+
+}
