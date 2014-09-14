@@ -163,10 +163,10 @@ body * {
 /* mobile exceptions */
 @media screen and (max-device-width: 600px){
 	html {
-		width: 600px;
+		width: auto;
 	}
 	body {
-		width: 600px;
+		width: auto;
 	}
 	#navbar .btn {
 		display: none;
@@ -174,12 +174,16 @@ body * {
 	#wrapper {
 		position: absolute;
 		left: 0px; top: 0px;
+		width: 420px;
 	}
 	#text-div {
 		width: 100%;
 	}
 		#section0 {
 			margin-top: 100px;
+		}
+		.section {
+			width: 420px;
 		}
 	#screenshot-div {
 		display: none;
