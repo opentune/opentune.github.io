@@ -164,13 +164,15 @@ body * {
 		display: none;
 	}
 	#wrapper {
-		width: 100%;
+		width: auto;
 	}
 	#text-div {
-		width: 100%;
+		width: auto;
 	}
 	#screenshot-div {
 		display: none;
 	}
-
+	#github-icon {
+		margin-right: 45px;
+	}
 }
