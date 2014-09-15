@@ -76,7 +76,13 @@ body * {
 		}
 		@media screen and (min-width: 1700px){
 			.section {
-				zoom: 115%;
+				zoom: 107%;
+			}
+			#section0 {
+				padding-top: 10px;
+			}
+			.screenshot {
+				zoom: 107%;
 			}
 		}
 		@media screen and (max-width: 1300px){
