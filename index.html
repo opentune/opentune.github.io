@@ -10,13 +10,22 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css' />
 		<link type="text/css" href="main.css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="tooltipster.css" />
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-54845817-1', 'auto');
+		  ga('send', 'pageview');
+		</script>
 	</head>
 	<body>
 		<div id="navbar">
 			<img src="images/logo.png" id="logo" />
 			
-			<a href="https://mega.co.nz/#!SpFCGBiQ!adNQ5LCFBl0QFewIodHLJqGZIWXR3zFHMOfI7pifZmQ" target="_blank"><span class="btn clickable">download</span></a>
-			<a href="https://github.com/opentune/opentune" target="_blank"><img src="images/github-icon.png" class="icons clickable" id="github-icon" /></a>
+			<a href="https://mega.co.nz/#!SpFCGBiQ!adNQ5LCFBl0QFewIodHLJqGZIWXR3zFHMOfI7pifZmQ" target="_blank"><span class="btn clickable download-link">download</span></a>
+			<a href="https://github.com/opentune/opentune" target="_blank"><img src="images/github-icon.png" class="icons clickable github-link" id="github-icon" /></a>
 			<a href="https://www.facebook.com/pages/OpenTune/1488393731437900" target="_blank"><img src="images/facebook-icon.png" class="icons clickable" /></a>
 		</div>
 
@@ -27,7 +36,7 @@
 					<p class="textarea" style="text-align:center;padding:0px">
 						The easiest way to browse, search, and download music straight from your desktop - for free.
 					</p>
-					<a href="https://mega.co.nz/#!SpFCGBiQ!adNQ5LCFBl0QFewIodHLJqGZIWXR3zFHMOfI7pifZmQ" target="_blank"><span class="btn big-btn clickable tooltip" title="Encrypted &amp; hosted on MEGA">download for windows</span></a>
+					<a href="https://mega.co.nz/#!SpFCGBiQ!adNQ5LCFBl0QFewIodHLJqGZIWXR3zFHMOfI7pifZmQ" target="_blank"><span class="btn big-btn clickable download-link tooltip" id="top-download-link" title="Encrypted &amp; hosted on MEGA">download for windows</span></a>
 					<br>
 					<img src="images/icons.png" id="badges" />
 				</div>
@@ -67,14 +76,14 @@
 				</div>
 				<div class="section"  id="section5" style="margin-bottom: 250px">
 					<h2 class="header2">The easiest way<br>to keep music.</h2>
-					<a href="https://mega.co.nz/#!SpFCGBiQ!adNQ5LCFBl0QFewIodHLJqGZIWXR3zFHMOfI7pifZmQ" target="_blank"><span class="btn big-btn clickable tooltip" title="Encrypted &amp; hosted on MEGA">download for windows</span><br></a>
+					<a href="https://mega.co.nz/#!SpFCGBiQ!adNQ5LCFBl0QFewIodHLJqGZIWXR3zFHMOfI7pifZmQ" target="_blank"><span class="btn big-btn clickable download-link tooltip" id="bottom-download-link" title="Encrypted &amp; hosted on MEGA">download for windows</span><br></a>
 					<p class="under-btn">
 						Coming soon to Mac, Linux, &amp; Android.
 					</p>
 				</div>
 
 				
-				<p id="footer"><a href="mailto:opentune12@gmail.com" target="_top">Email us</a> | <a href="http://opentuneblog.tumblr.com/" target="_blank">Read our blog</a> | <a href="https://github.com/opentune/opentune" target="_blank">View source</a></p>
+				<p id="footer"><a href="mailto:opentune12@gmail.com" target="_top">Email us</a> | <a href="http://opentuneblog.tumblr.com/" target="_blank" id="blog-link">Read our blog</a> | <a href="https://github.com/opentune/opentune" target="_blank" class="github-link">View source</a></p>
 			</div>
 			<div id="screenshot-div">
 				<img src="images/screenshot0.jpg" class="screenshot" id="screenshot0" />
@@ -118,6 +127,21 @@
   			$('#wrapper').fadeTo(1000, 1);
   			$('#section0').animate({left: "0px"}, 700);
   			$('.screenshot').animate({left: "0px"}, 700);
+		});
+		$('.download-link').click(function() {
+			ga('send', 'event', 'button', 'click', 'download button');
+		});
+		$('#top-download-link').click(function() {
+			ga('send', 'event', 'button', 'click', 'top download button');
+		});
+		$('#bottom-download-link').click(function() {
+			ga('send', 'event', 'button', 'click', 'bottom download button');
+		});
+		$('#blog-link').click(function() {
+			ga('send', 'event', 'button', 'click', 'blog link');
+		});
+		$('.github-link').click(function() {
+			ga('send', 'event', 'button', 'click', 'github link');
 		});
 		</script>
 
