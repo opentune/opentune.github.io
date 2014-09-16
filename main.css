@@ -84,11 +84,17 @@ body * {
 			.screenshot {
 				zoom: 107%;
 			}
+			.tooltipster-default {
+				zoom: 107%;
+			}
 		}
 		@media screen and (max-width: 1300px){
 			.section {
 				zoom: 90%;
 				padding-top: 20px;
+			}
+			.tooltipster-default {
+				zoom: 90%;
 			}
 		}
 			#section0 {
