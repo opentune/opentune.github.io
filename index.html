@@ -2,9 +2,14 @@
 	<head>
 		<title>OpenTune | The Easiest Way to Download Music.</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<meta property="og:title" content="OpenTune | The Easiest Way to Download Music." />
+		<meta property="og:site_name" content="Download OpenTune"/>
+		<meta property="og:url" content="http://www.opentune.tk" />
+		<meta property="og:image" content="http://opentune.tk/images/favicon.png" />
 		<link rel="icon" type="image/png" href="images/favicon.png">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css' />
-		<link type="text/css" href="main.css" rel="stylesheet">
+		<link type="text/css" href="main.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="tooltipster.css" />
 	</head>
 	<body>
 		<div id="navbar">
@@ -22,7 +27,7 @@
 					<p class="textarea" style="text-align:center;padding:0px">
 						The easiest way to browse, search, and download music straight from your desktop - for free.
 					</p>
-					<a href="https://mega.co.nz/#!SpFCGBiQ!adNQ5LCFBl0QFewIodHLJqGZIWXR3zFHMOfI7pifZmQ" target="_blank"><span class="btn big-btn clickable">download for windows</span></a>
+					<a href="https://mega.co.nz/#!SpFCGBiQ!adNQ5LCFBl0QFewIodHLJqGZIWXR3zFHMOfI7pifZmQ" target="_blank"><span class="btn big-btn clickable tooltip" title="Encrypted &amp; hosted on MEGA">download for windows</span></a>
 					<br>
 					<img src="images/icons.png" id="badges" />
 				</div>
@@ -62,7 +67,7 @@
 				</div>
 				<div class="section"  id="section5" style="margin-bottom: 250px">
 					<h2 class="header2">The easiest way<br>to keep music.</h2>
-					<a href="https://mega.co.nz/#!SpFCGBiQ!adNQ5LCFBl0QFewIodHLJqGZIWXR3zFHMOfI7pifZmQ" target="_blank"><span class="btn big-btn clickable">download for windows</span><br></a>
+					<a href="https://mega.co.nz/#!SpFCGBiQ!adNQ5LCFBl0QFewIodHLJqGZIWXR3zFHMOfI7pifZmQ" target="_blank"><span class="btn big-btn clickable tooltip" title="Encrypted &amp; hosted on MEGA">download for windows</span><br></a>
 					<p class="under-btn">
 						Coming soon to Mac, Linux, &amp; Android.
 					</p>
@@ -83,6 +88,7 @@
 		<script type="text/javascript" src="greensock/TweenMax.min.js"></script>
 		<script src="jquery-1.9.1.min.js"></script>
 	  	<script src="jquery.superscrollorama.js"></script>
+	  	<script type="text/javascript" src="jquery.tooltipster.min.js"></script>
 	  	<script>
   		$(document).ready(function() {
 
@@ -97,6 +103,14 @@
 			$('#wrapper').fadeTo(1000, 1);
   			$('#section0').animate({left: "0px"}, 700);
   			$('.screenshot').animate({left: "0px"}, 700);
+
+  			//activate tooltip plugin
+  			$('.tooltip').tooltipster({
+  				delay: 0,
+  				position: 'bottom',
+  				offsetX: 23,
+  				offsetY: 36
+  			});
 			
 		});
 		$('#screenshot0').load(function() {
