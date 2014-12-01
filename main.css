@@ -209,8 +209,24 @@ body * {
 	}
 }
 
-#temp-msg {
+.temp-msg {
 	font-size: 15px;
 	opacity: 0.7;
 	font-weight: 300;
 }
+
+#lightbox-content {
+	font-size: 16px;
+	font-weight: 300;
+	text-align: center;
+}
+	#lightbox-content #i1 {
+		height: 197px;
+		margin-right: 43px;
+	}
+	#lightbox-content .big-btn {
+		font-size: 1.2em;
+		padding: 6px 18px 7px 18px;
+		margin-top: 25px; margin-bottom: 16px;
+		border-radius: 3px;
+	}

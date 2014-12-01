@@ -7,9 +7,10 @@
 		<meta property="og:url" content="http://www.opentune.tk" />
 		<meta property="og:image" content="http://opentune.tk/images/favicon.png" />
 		<link rel="icon" type="image/png" href="images/favicon.png">
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:500,400,300' rel='stylesheet' type='text/css' />
 		<link type="text/css" href="main.css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="tooltipster.css" />
+		<link href="lightbox/featherlight.css" type="text/css" rel="stylesheet" title="Featherlight Styles" />
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -37,7 +38,7 @@
 						The easiest way to browse, search, and download music straight from your desktop - for free.
 					</p>
 					<a href="http://sourceforge.net/projects/opentune/files/opentune-windows.exe/download" target="_blank"><span class="btn big-btn clickable download-link tooltip" id="top-download-link" title="Hosted on SourceForge">download for windows</span></a>
-					<br><a href="http://sourceforge.net/projects/opentune/files/opentune-osx.zip/download" target="_blank" class=".mac-download-link"><span id="temp-msg">or download alpha version for mac</span></a>
+					<br><a href="http://sourceforge.net/projects/opentune/files/opentune-osx.zip/download" target="_blank" class=".mac-download-link activate-lightbox"><span class="temp-msg">or download alpha version for mac</span></a>
 					<br>
 					<img src="images/icons.png" id="badges" />
 				</div>
@@ -78,7 +79,7 @@
 				<div class="section"  id="section5" style="margin-bottom: 250px">
 					<h2 class="header2">The easiest way<br>to keep music.</h2>
 					<a href="http://sourceforge.net/projects/opentune/files/opentune-windows.exe/download" target="_blank"><span class="btn big-btn clickable download-link" id="bottom-download-link" title="Hosted on SourceForge">download for windows</span></a>
-					<br><a href="http://sourceforge.net/projects/opentune/files/opentune-osx.zip/download" target="_blank" class=".mac-download-link"><span id="temp-msg">or download alpha version for mac</span></a>
+					<br><a href="http://sourceforge.net/projects/opentune/files/opentune-osx.zip/download" target="_blank" class=".mac-download-link activate-lightbox"><span class="temp-msg">or download alpha version for mac</span></a>
 					<p class="under-btn">
 						(Coming soon to Linux &amp; Android.)
 					</p>
@@ -100,6 +101,7 @@
 		<script src="jquery-1.9.1.min.js"></script>
 	  	<script src="jquery.superscrollorama.js"></script>
 	  	<script type="text/javascript" src="jquery.tooltipster.min.js"></script>
+	  	<script type="text/javascript" src="lightbox/featherlight.min.js"></script>
 	  	<script>
   		$(document).ready(function() {
 
@@ -120,6 +122,14 @@
   				delay: 0,
   				position: 'top'
   			});
+
+  			//detect user OS
+  			var OSName;
+			if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+			if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
+			if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
+			if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+			processOS(OSName);
 			
 		});
 		$('#screenshot0').load(function() {
@@ -128,6 +138,8 @@
   			$('#section0').animate({left: "0px"}, 700);
   			$('.screenshot').animate({left: "0px"}, 700);
 		});
+
+		//tracking
 		$('.download-link').click(function() {
 			ga('send', 'event', 'button', 'click', 'download button');
 		});
@@ -146,6 +158,25 @@
 		$('.github-link').click(function() {
 			ga('send', 'event', 'button', 'click', 'github link');
 		});
+
+		function processOS(os) {
+			if (os == "MacOS") {
+				//replace all major dl buttons with "download for mac" and replace href
+				$(".download-link").text("download for mac");
+				$(".download-link").parent().attr("href", "http://sourceforge.net/projects/opentune/files/opentune-osx.zip/download").addClass("activate-lightbox");;
+				$(".temp-msg").text("or download windows version");
+				$(".temp-msg").parent().attr("href", "http://sourceforge.net/projects/opentune/files/opentune-windows.exe/download").removeClass("activate-lightbox");
+			}
+		}
+
+		//mac version lightbox
+		$(document).on('click', '.activate-lightbox', function(e) {
+			//open lightbox
+			e.preventDefault();
+			var lightboxContent = "<p id='lightbox-content'><span style='opacity:0.8'><span style='font-weight:500'>[Update]</span> Your Mac may prevent you from opening the installer because OpenTune isn't downloaded from the Mac App Store. If this happens, hold down the Control key while clicking the app icon, then click open.</span><br><br><img src='images/lightbox1.png' id='i1' /><img src='images/lightbox2.png' id='i2' /><br><a href='http://sourceforge.net/projects/opentune/files/opentune-osx.zip/download' target='_blank'><span class='btn big-btn clickable' title='Hosted on SourceForge'>Proceed to Download</span></a></p>";
+			$.featherlight(lightboxContent, $.featherlight.defaults);
+		});
+
 		</script>
 
 		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5413dd76319fb99a"></script>
